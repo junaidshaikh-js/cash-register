@@ -10,6 +10,71 @@
     <title>Cash Register Manager</title>
   </head>
   <body>
+    <div class="outer-container">
+      <header>
+        <h1>Cash Register Manager</h1>
+      </header>
+      <div class="main-section-wrapper">
+        <main>
+          <h2>
+            Enter the bill amount and cash given by the customer and know
+            minimum number of notes to return.
+          </h2>
+          <section>
+            <form>
+              <label for="bill-amount">Bill Amount:</label>
+              <input
+                type="number"
+                name="bill-amount"
+                id="bill-amount"
+                min="0"
+                placeholder="0"
+                required
+              />
+              <label for="cash-given">Cash Given:</label>
+              <input
+                type="number"
+                name="cash-given"
+                id="cash-given"
+                min="0"
+                placeholder="0"
+                required
+              />
+              <button type="submit">Check</button>
+            </form>
+            <div class="change-returned">
+              <table>
+                <caption>
+                  Return Change
+                </caption>
+                <thead>
+                  <tr>
+                    <th>No. of notes</th>
+                    <td class="notes">0</td>
+                    <td class="notes">0</td>
+                    <td class="notes">0</td>
+                    <td class="notes">0</td>
+                    <td class="notes">0</td>
+                    <td class="notes">0</td>
+                    <td class="notes">0</td>
+                  </tr>
+                  <tr>
+                    <th>Note</th>
+                    <td>2000</td>
+                    <td>500</td>
+                    <td>100</td>
+                    <td>20</td>
+                    <td>10</td>
+                    <td>5</td>
+                    <td>1</td>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
     <!-- javaScript -->
     <script src="./js/index.js"></script>
   </body>
