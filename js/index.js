@@ -13,15 +13,12 @@ function flush(amountToBeReturned) {
       break;
     }
 
-    console.log(i);
     let numberOfNotes = Math.floor(amountToBeReturned / value);
 
     noteCells[i].innerHTML = numberOfNotes;
 
     amountToBeReturned %= value;
   }
-  // notes.forEach((value, index) => {
-  // });
 }
 
 function alertUser(message) {
