@@ -3,9 +3,13 @@ const cashGivenInput = document.querySelector("#cash-given");
 const form = document.querySelector("form");
 const noteCells = document.querySelectorAll(".notes");
 
-const notes = [2000, 500, 100, 50, 20, 10, 1];
+const notes = [2000, 500, 100, 20, 10, 5, 1];
 
 function flush(amountToBeReturned) {
+  noteCells.forEach((noteCell) => {
+    noteCell.innerHTML = "0";
+  });
+
   for (let i = 0; i < notes.length; i++) {
     let value = notes[i];
 
