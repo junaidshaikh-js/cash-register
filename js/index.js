@@ -3,6 +3,24 @@ const cashGivenInput = document.querySelector("#cash-given");
 const form = document.querySelector("form");
 const noteCells = document.querySelectorAll(".notes");
 
+const nextBtn = document.querySelector(".next");
+const stepTwo = document.querySelector(".form-step-two");
+const changeTable = document.querySelector(".change-returned");
+
+stepTwo.style.display = "none";
+changeTable.style.display = "none";
+
+nextBtn.addEventListener("click", () => {
+  if (!billAmountInput.value) {
+    alertUser("Enter Bill Amount");
+  } else if (billAmountInput.value < 1) {
+    alertUser("Enter Value greater than 0");
+  } else {
+    stepTwo.style.display = "block";
+    nextBtn.style.display = "none";
+  }
+});
+
 const notes = [2000, 500, 100, 20, 10, 5, 1];
 
 function flush(amountToBeReturned) {
@@ -53,6 +71,7 @@ function calculateChange(e) {
     flush(amountToBeReturned);
   }
 
+  changeTable.style.display = "block";
   e.preventDefault();
 }
 

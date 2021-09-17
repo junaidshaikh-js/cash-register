@@ -22,26 +22,33 @@
           </h2>
           <section>
             <form>
-              <label for="bill-amount">Bill Amount:</label>
-              <input
-                type="number"
-                name="bill-amount"
-                id="bill-amount"
-                min="0"
-                placeholder="0"
-                required
-              />
-              <label for="cash-given">Cash Given:</label>
-              <input
-                type="number"
-                name="cash-given"
-                id="cash-given"
-                min="0"
-                placeholder="0"
-                required
-              />
-              <button type="submit">Check</button>
+              <div class="form-step-one">
+                <label for="bill-amount">Bill Amount:</label>
+                <input
+                  type="number"
+                  name="bill-amount"
+                  id="bill-amount"
+                  min="0"
+                  placeholder="0"
+                  required
+                />
+                <button type="button" class="next">Next</button>
+              </div>
+
+              <div class="form-step-two">
+                <label for="cash-given">Cash Given:</label>
+                <input
+                  type="number"
+                  name="cash-given"
+                  id="cash-given"
+                  min="0"
+                  placeholder="0"
+                  required
+                />
+                <button type="submit">submit</button>
+              </div>
             </form>
+
             <div class="change-returned">
               <table>
                 <caption>
